@@ -1,10 +1,12 @@
 {
     "configurations": [
+
         {
             "type": "java",
             "name": "CodeLens (Launch) - wayEncryption",
             "request": "launch",
             "mainClass": "wayEncryption",
+            "console": "integratedTerminal",
             "projectName": "Coding-Challenges_2407cdf9"
         },
     ]
