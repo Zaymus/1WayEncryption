@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - wayEncryption",
+            "request": "launch",
+            "mainClass": "wayEncryption",
+            "projectName": "Coding-Challenges_2407cdf9"
+        }
+    ]
+}
