@@ -2,7 +2,6 @@ import java.util.*;
 
 public class wayEncryption
 {
-	
 	static Scanner sc = new Scanner(System.in);
 	static int newVal1 = 0, newVal2 = 0, encryptedVal;
 		public static void main(String[] args)
@@ -14,16 +13,11 @@ public class wayEncryption
 			encrypt(num);
 		}
 	}//end of main
-
-	/*		a function which takes an integer greater than 99999,
-		
-				- adds 4 to each digit,
-				- shifts digits 1 to the left
-				- If the digit is greater than 9 subtract 10
-		
-			no arrays, strings or chars		*/
+	
+	//- shift digits 1 to the left
 	public static void encrypt(int num)
 	{		
+		int val = 0;
 		while(num != 0)
 		{
 			newVal1 = (val % 10) + 4;
@@ -35,9 +29,19 @@ public class wayEncryption
 			
 			System.out.print(newVal1);
 		}//end of while	
-		System.out.println("\n");
+		val = Integer.parseInt(System.read());
+		
+		System.out.println("Encrypted Number: " + shift(val));
 	}//end of encrypt
 	
+	public static int shift(int num)
+	{
+		int shiftedNum = num;
+		
+		shiftedNum <<= 31; 
+		System.out.println(num + " --> " + shiftedNum);
+		return shiftednum;
+	}//end of shift
 	public static int getLength(int num)
 	{
 		int l = 0;
