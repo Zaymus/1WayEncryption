@@ -1,3 +1,4 @@
+package wayEncryption;
 import java.util.*;
 
 public class wayEncryption
@@ -29,7 +30,7 @@ public class wayEncryption
 			
 			System.out.print(newVal1);
 		}//end of while	
-		val = Integer.parseInt(System.read());
+		val = Integer.parseInt(sc.nextLine());
 		
 		System.out.println("Encrypted Number: " + shift(val));
 	}//end of encrypt
@@ -40,7 +41,7 @@ public class wayEncryption
 		
 		shiftedNum <<= 31; 
 		System.out.println(num + " --> " + shiftedNum);
-		return shiftednum;
+		return shiftedNum;
 	}//end of shift
 	public static int getLength(int num)
 	{
