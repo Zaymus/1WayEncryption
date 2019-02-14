@@ -1,5 +1,4 @@
-import java.util.*;
-import java.io.*;
+import java.util.*; import java.io.*;
 
 public class wayEncryption
 {
@@ -29,7 +28,6 @@ public class wayEncryption
 			num /= 10;
 			read = Integer.parseInt(read + "" + val);
 		}//end of while			
-		
 		System.out.println("\nEncrypted Number: " + shift(reverse(read)));
 	}//end of encrypt
 	
