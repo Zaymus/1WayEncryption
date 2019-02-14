@@ -1,16 +1,17 @@
-package wayEncryption;
 import java.util.*;
+import java.io.*;
 
 public class wayEncryption
 {
 	static Scanner sc = new Scanner(System.in);
 	static int newVal1 = 0, newVal2 = 0, encryptedVal;
+	static BufferedReader buffReader = new BufferedReader(new InputStreamReader(System.in));
+
 		public static void main(String[] args)
 	{
 		while(true) {
-			System.out.println("input a number");
+			System.out.println("\n\nInput a number");
 			int num = sc.nextInt();
-			System.out.print("\nEncrypted number: ");
 			encrypt(num);
 		}
 	}//end of main
@@ -19,28 +20,28 @@ public class wayEncryption
 	public static void encrypt(int num)
 	{		
 		int val = 0;
+		int read = 0;
 		while(num != 0)
 		{
-			newVal1 = (val % 10) + 4;
-			if (newVal1 > 9)
+			val = (num % 10) + 4;
+			if (val > 9)
 			{
-				newVal1 -= 10;
+				val -= 10;
 			}//end of if
 			num /= 10;
 			
-			System.out.print(newVal1);
-		}//end of while	
-		val = Integer.parseInt(sc.nextLine());
+			System.out.print(val);
+			read = Integer.parseInt(read + "" + val);
+
+		}//end of while			
 		
-		System.out.println("Encrypted Number: " + shift(val));
+		System.out.println("\nEncrypted Number: " + shift(read));
 	}//end of encrypt
 	
 	public static int shift(int num)
 	{
-		int shiftedNum = num;
+		int shiftedNum = 0;
 		
-		shiftedNum <<= 31; 
-		System.out.println(num + " --> " + shiftedNum);
 		return shiftedNum;
 	}//end of shift
 	public static int getLength(int num)
