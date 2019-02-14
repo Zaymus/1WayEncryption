@@ -1,11 +1,9 @@
-import java.util.*; import java.io.*;
+import java.util.*;
 
 public class wayEncryption
 {
 	static Scanner sc = new Scanner(System.in);
 	static int val = 0, read = 0, reversedNum = 0, temp1 = 0, shiftedNum = 0;
-	static BufferedReader buffReader = new BufferedReader(new InputStreamReader(System.in));
-
 	public static void main(String[] args)
 	{
 		while(true) 
