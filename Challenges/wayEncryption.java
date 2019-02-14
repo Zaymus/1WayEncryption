@@ -4,23 +4,21 @@ import java.io.*;
 public class wayEncryption
 {
 	static Scanner sc = new Scanner(System.in);
-	static int newVal1 = 0, newVal2 = 0, encryptedVal;
+	static int val = 0, read = 0, reversedNum = 0, temp1 = 0, shiftedNum = 0;
 	static BufferedReader buffReader = new BufferedReader(new InputStreamReader(System.in));
 
-		public static void main(String[] args)
+	public static void main(String[] args)
 	{
-		while(true) {
+		while(true) 
+		{
 			System.out.println("\n\nInput a number");
 			int num = sc.nextInt();
 			encrypt(num);
-		}
+		}//end of while
 	}//end of main
 	
-	//- shift digits 1 to the left
 	public static void encrypt(int num)
 	{		
-		int val = 0;
-		int read = 0;
 		while(num != 0)
 		{
 			val = (num % 10) + 4;
@@ -29,29 +27,28 @@ public class wayEncryption
 				val -= 10;
 			}//end of if
 			num /= 10;
-			
-			System.out.print(val);
 			read = Integer.parseInt(read + "" + val);
-
 		}//end of while			
 		
-		System.out.println("\nEncrypted Number: " + shift(read));
+		System.out.println("\nEncrypted Number: " + shift(reverse(read)));
 	}//end of encrypt
 	
-	public static int shift(int num)
+	public static int reverse(int num)
 	{
-		int shiftedNum = 0;
-		
-		return shiftedNum;
-	}//end of shift
-	public static int getLength(int num)
-	{
-		int l = 0;
 		while(num != 0)
 		{
+			val = num % 10;
+			reversedNum = Integer.parseInt(reversedNum + "" + val);
 			num /= 10;
-			l++;
 		}//end of while
-		return l;
-	}//end of getLength
+		return reversedNum;
+	}//end of reverse
+
+	public static int shift(int num)
+	{
+		temp1 = num % 10;
+		num /= 10;
+		shiftedNum = Integer.parseInt("" + temp1 + "" + num);
+		return shiftedNum;
+	}//end of shift
 }//end of class
