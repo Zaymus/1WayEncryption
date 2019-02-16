@@ -8,6 +8,11 @@ public class wayEncryption
 	{
 		while(true) 
 		{
+			val = 0;
+			read = 0;
+			reversedNum = 0;
+			temp1 = 0;
+			shiftedNum = 0;
 			System.out.println("\n\nInput a number");
 			int num = sc.nextInt();
 			encrypt(num);
