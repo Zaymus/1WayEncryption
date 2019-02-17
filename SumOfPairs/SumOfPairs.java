@@ -3,8 +3,8 @@ import java.util.*;
 public class SumOfPairs
 {
 	static Scanner sc = new Scanner(System.in);
-	int[] nums;
-    int inputVal;
+	static int[] nums;
+    static int inputVal;
     
 	public static void main(String[] args)
 	{
@@ -17,7 +17,7 @@ public class SumOfPairs
         }//end of for
         System.out.println("input a value to find the values that add to inputted value");
         inputVal = sc.nextInt();
-        findPairs(nums[], inputVal);
+        findPairs(nums, inputVal);
     }//end of main
     
     public static void findPairs(int[] a, int val)

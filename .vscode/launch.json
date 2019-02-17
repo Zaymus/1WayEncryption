@@ -1,6 +1,13 @@
 {
     "configurations": [
-
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SumOfPairs",
+            "request": "launch",
+            "mainClass": "SumOfPairs",
+            "console": "integratedTerminal",
+            "projectName": "Coding-Challenges_2407cdf9"
+        },
         {
             "type": "java",
             "name": "CodeLens (Launch) - wayEncryption",
@@ -8,6 +15,6 @@
             "mainClass": "wayEncryption",
             "console": "integratedTerminal",
             "projectName": "Coding-Challenges_2407cdf9"
-        },
+        }
     ]
 }
